@@ -1,0 +1,10 @@
+file_format: "1"
+id: tabula
+name: Tabula Keyboard
+type: shield
+requires: [pro_micro]
+features:
+  - keys
+siblings:
+  - tabula_left
+  - tabula_right
