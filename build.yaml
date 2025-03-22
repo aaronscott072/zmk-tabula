@@ -24,3 +24,5 @@ include:
     shield: tabula_left
   - board: nice_nano_v2
     shield: tabula_right
+  - board: nice_nano_v2
+    shield: settings_reset
