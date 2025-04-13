@@ -21,7 +21,7 @@
         lower_layer {
             bindings = <
 &kp ESC   &kp EXCL &kp AT    &kp POUND &kp DLLR  &kp PRCNT                                                 &kp CARET &kp AMPS  &kp STAR  &kp LPAR  &kp RPAR &kp BSPC
-&kp TAB   &none    &kp TILDE &kp DQT   &kp UNDER &kp PLUS                                                  &none     &kp HOME  &kp END   &none     &none    &kp BSLH
+&trans    &none    &kp TILDE &kp DQT   &kp UNDER &kp PLUS                                                  &none     &kp HOME  &kp END   &none     &none    &kp BSLH
 &kp LCTRL &none    &kp GRAVE &kp APOS  &kp MINUS &kp EQUAL &none                                 &none     &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT &none    &kp ENTER
 &kp LSHFT &none    &kp LBRC  &kp RBRC  &kp LBKT  &kp RBKT                                                  &none     &none     &none     &none     &none    &kp RSHFT
                    &kp DEL   &none     &kp LGUI  &kp LALT  &kp LSHFT &kp LBKT          &kp RBKT  &kp SPACE &none     &kp ENTER &none     &kp DEL
