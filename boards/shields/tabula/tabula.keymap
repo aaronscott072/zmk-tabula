@@ -3,6 +3,10 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/ext_power.h>
 
+&sl {
+    release-after-ms = <1000>;
+};
+
 / {
     behaviors {
         tdSHFT: tap_dance_0 {
@@ -11,10 +15,6 @@
             tapping-term-ms = <200>;
             bindings = <&kp LSHFT>, <&caps_word>;
         };
-    };
-
-    &sl {
-        release-after-ms = <1000>;
     };
 
     keymap {
