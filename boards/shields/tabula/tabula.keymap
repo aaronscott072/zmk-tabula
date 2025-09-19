@@ -3,6 +3,10 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/ext_power.h>
 
+#define TCUT   <&kp LC(LS(X))>
+#define TCOPY  <&kp LC(LS(C))>
+#define TPASTE <&kp LC(LS(V))>
+
 &sl {
     release-after-ms = <1000>;
 };
@@ -23,25 +27,35 @@
         /* https://zmk.dev/docs/keymaps/list-of-keycodes */
         default_layer {
             bindings = <
-&kp ESC   &kp N1 &kp N2   &kp N3     &kp N4   &kp N5                                                   &kp N6    &kp N7    &kp N8    &kp N9   &kp N0   &kp BSPC            
-&kp TAB   &kp Q  &kp W    &kp E      &kp R    &kp T                                                    &kp Y     &kp U     &kp I     &kp O    &kp P    &kp BSLH
-&kp LCTRL &kp A  &kp S    &kp D      &kp F    &kp G    &kp C_MUTE                            &kp PSCRN &kp H     &kp J     &kp K     &kp L    &kp SEMI &kp ENTER
-&tdSHFT   &kp Z  &kp X    &kp C      &kp V    &kp B                                                    &kp N     &kp M     &kp COMMA &kp DOT  &kp FSLH &tdSHFT
-                 &kp DEL  &sl 1      &kp LGUI &kp LALT &tdSHFT   &kp C_MUTE        &kp PSCRN &kp SPACE &kp SPACE &kp ENTER &sl 1     &kp DEL
-                                                                 &mo 2             &mo 2
+&kp ESC   &kp N1 &kp N2   &kp N3     &kp N4   &kp N5                                                   &kp N6      &kp N7    &kp N8    &kp N9   &kp N0   &kp BSPC            
+&kp TAB   &kp Q  &kp W    &kp E      &kp R    &kp T                                                    &kp Y       &kp U     &kp I     &kp O    &kp P    &kp BSLH
+&kp LCTRL &kp A  &kp S    &kp D      &kp F    &kp G    &kp C_MUTE                            &kp PSCRN &kp H       &kp J     &kp K     &kp L    &kp SEMI &kp ENTER
+&tdSHFT   &kp Z  &kp X    &kp C      &kp V    &kp B                                                    &kp N       &kp M     &kp COMMA &kp DOT  &kp FSLH &tdSHFT
+                 &kp DEL  &sl 2      &kp LGUI &kp LALT &tdSHFT   &kp C_MUTE        &kp PSCRN &kp SPACE &lt 1 SPACE &kp ENTER &kp BSPC  &kp DEL
+                                                                 &mo 3             &mo 3
             >;
         };
-        lower_layer {
+        symbols_layer {
             bindings = <
-&trans    &kp EXCL &kp AT    &kp POUND &kp DLLR  &kp PRCNT                                                 &kp CARET &kp AMPS  &kp STAR  &kp LPAR  &kp RPAR &trans
-&trans    &none    &kp TILDE &kp DQT   &kp UNDER &kp PLUS                                                  &none     &kp HOME  &kp END   &none     &none    &trans
-&trans    &none    &kp GRAVE &kp APOS  &kp MINUS &kp EQUAL &none                                 &none     &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT &none    &trans
-&trans    &none    &kp LBRC  &kp RBRC  &kp LBKT  &kp RBKT                                                  &none     &none     &none     &none     &none    &trans
-                   &trans    &none     &trans    &trans    &trans    &trans            &trans    &trans    &none     &trans    &none     &trans
+&trans    &kp EXCL &kp AT    &kp POUND &kp DLLR  &kp PRCNT                                                 &none     &none  &none  &none &none &trans
+&trans    &none    &kp TILDE &kp DQT   &kp UNDER &kp PLUS                                                  &none     &none  &none  &none &none &trans
+&trans    &none    &kp GRAVE &kp APOS  &kp MINUS &kp EQUAL &none                                &none      &none     &none  &none  &none &none &trans
+&trans    &none    &kp LBRC  &kp RBRC  &kp LBKT  &kp RBKT                                                  &none     &none  &none  &none &none &trans
+                   &trans    &none     &trans    &trans    &trans    &none             &none    &trans     &kp SPACE &trans &none  &trans
                                                                      &none             &none
             >;
         };
-        funcional_layer {
+        navigation_layer {
+            bindings = <
+&trans    &none    &none    &none    &none  &none                                                  &kp CARET &kp AMPS  &kp STAR  &kp LPAR  &kp RPAR &trans
+&trans    &none    &none    &none    &none  &none                                                  &none     &kp HOME  &kp END   &none     &none    &trans
+&trans    TCUT     TCOPY    TPASTE   &none  &none  &none                                 &none     &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT &none    &trans
+&trans    &K_CUT   &K_COPY  &K_PASTE &none  &none                                                  &none     &none     &none     &none     &none    &trans
+                   &trans   &none    &trans &trans &trans    &none             &none     &trans    &none     &trans    &none     &trans
+                                                             &none             &none
+            >;
+        };
+        functional_layer {
             bindings = <
 &kp F1     &kp F2       &kp F3       &kp F4       &kp F5       &kp F6                                            &kp F7    &kp F8    &kp F9    &kp F10   &kp F11  &kp F12
 &none      &none        &none        &none        &none        &none                                             &none     &kp N7    &kp N8    &kp N9    &none    &none
