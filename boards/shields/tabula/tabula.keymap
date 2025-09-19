@@ -50,12 +50,12 @@
         };
         navigation_layer {
             bindings = <
-&trans    &none    &none    &none    &none  &none                                                  &kp CARET &kp AMPS  &kp STAR  &kp LPAR  &kp RPAR &trans
-&trans    &none    &none    &none    &none  &none                                                  &none     &kp HOME  &kp END   &none     &none    &trans
-&trans    TCUT     TCOPY    TPASTE   &none  &none  &none                                 &none     &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT &none    &trans
-&trans    CUT      COPY     PASTE    &none  &none                                                  &none     &none     &none     &none     &none    &trans
-                   &trans   &none    &trans &trans &trans    &none             &none     &trans    &none     &trans    &none     &trans
-                                                             &none             &none
+&trans    &none    &none    &none    &none  &none                                               &kp CARET &kp AMPS  &kp STAR  &kp LPAR  &kp RPAR &trans
+&trans    &none    &none    &none    &none  &none                                               &none     &kp HOME  &kp END   &none     &none    &trans
+&trans    &none    TCUT     TCOPY    TPASTE &none  &none  &none                                 &none     &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT &none    &trans
+&trans    &none    CUT      COPY     PASTE  &none  &none                                                  &none     &none     &none     &none     &none    &trans
+                   &trans   &none    &trans &trans &trans &none             &none     &trans    &none     &trans    &none     &trans
+                                                          &none             &none
             >;
         };
         functional_layer {
