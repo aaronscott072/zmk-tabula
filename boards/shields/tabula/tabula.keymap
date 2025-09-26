@@ -42,16 +42,16 @@
     release-after-ms = <1000>;
 };
 
-/ {
-    combos {
-        compatible = "zmk,combos";
-        combo_LBKT {
-            timeout-ms = <18>;
-            key-positions = <32 33>;
-            bindings = <&kp LBKT>;
-        };
-    };
-};
+// / {
+//     combos {
+//         compatible = "zmk,combos";
+//         combo_LBKT {
+//             timeout-ms = <18>;
+//             key-positions = <33 34>;
+//             bindings = <&kp LBKT>;
+//         };
+//     };
+// };
 
 / {
     behaviors {
