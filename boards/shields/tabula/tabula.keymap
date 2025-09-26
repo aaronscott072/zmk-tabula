@@ -51,7 +51,7 @@
         hml: home_row_mod_left {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "balanced";
+            flavor = "hold-preferred" //"balanced";
             require-prior-idle-ms = <150>;
             tapping-term-ms = <280>;
             quick-tap-ms = <175>;
@@ -62,7 +62,7 @@
         hmr: home_row_mod_right {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "balanced";
+            flavor = "hold-preferred" //"balanced";
             require-prior-idle-ms = <150>;
             tapping-term-ms = <280>;
             quick-tap-ms = <175>;
@@ -82,7 +82,7 @@
 &kp TAB   &kp Q  &kp W    &kp E      &kp R    &kp T                                                    &kp Y      &kp U     &kp I     &kp O    &kp P    &kp BSLH
 &kp LCTRL hrA    hrS      hrD        hrF      &kp G    &kp C_MUTE                            &kp PSCRN &kp H      hrJ       hrK       hrL      hrSEMI   &kp ENTER
 &tdSHFT   &kp Z  &kp X    &kp C      &kp V    &kp B                                                    &kp N      &kp M     &kp COMMA &kp DOT  &kp FSLH &tdSHFT
-                 &kp LGUI &kp DEL    &sl 2    &kp LALT &kp LSHFT  &kp DEL           &none    &sl 1     &kp SPACE  &kp ENTER &kp DEL   &kp BSPC
+                 &kp LGUI &kp DEL    &sl 2    &kp LALT &tdSHFT    &kp DEL           &none    &sl 1     &kp SPACE  &kp ENTER &kp DEL   &kp BSPC
                                                                   &mo 3             &mo 3
             >;
         };
