@@ -43,6 +43,17 @@
 };
 
 / {
+    combos {
+        compatible = "zmk,combos";
+        combo_LBKT {
+            timeout-ms = <18>;
+            key-positions = <32 33>;
+            bindings = <&kp LBKT>;
+        };
+    };
+};
+
+/ {
     behaviors {
         tdSHFT: tap_dance_0 {
             compatible = "zmk,behavior-tap-dance";
