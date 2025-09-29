@@ -61,6 +61,12 @@
             tapping-term-ms = <200>;
             bindings = <&kp LSHFT>, <&caps_word>;
         };
+        tdNAVGUI: tap_dance_0 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&sl 2>, <&kp LGUI>;
+        };
         hml: home_row_mod_left {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -91,13 +97,13 @@
         /* https://zmk.dev/docs/keymaps/list-of-keycodes */
         default_layer {
             bindings = <
-&kp ESC   &kp N1 &kp N2   &kp N3     &kp N4   &kp N5                                                   &kp N6     &kp N7    &kp N8    &kp N9   &kp N0   &kp BSPC
-&kp TAB   &kp Q  &kp W    &kp E      &kp R    &kp T                                                    &kp Y      &kp U     &kp I     &kp O    &kp P    &kp BSLH
-/* &kp LCTRL hrA    hrS      hrD        hrF      &kp G    &kp C_MUTE                            &kp PSCRN &kp H      hrJ       hrK       hrL      hrSEMI   &kp ENTER */
-&kp LCTRL &kp A  &kp S    &kp D      &kp F    &kp G    &kp C_MUTE                            &kp PSCRN &kp H      &kp J     &kp K     &kp L    &kp SEMI &kp ENTER
-&tdSHFT   &kp Z  &kp X    &kp C      &kp V    &kp B                                                    &kp N      &kp M     &kp COMMA &kp DOT  &kp FSLH &tdSHFT
-                 &kp LGUI &kp DEL    &sl 2    &kp LALT &tdSHFT    &kp DEL           &none    &sl 1     &kp SPACE  &kp ENTER &kp DEL   &kp BSPC
-                                                                  &mo 3             &mo 3
+&kp ESC   &kp N1 &kp N2   &kp N3     &kp N4     &kp N5                                                   &kp N6     &kp N7    &kp N8    &kp N9   &kp N0   &kp BSPC
+&kp TAB   &kp Q  &kp W    &kp E      &kp R      &kp T                                                    &kp Y      &kp U     &kp I     &kp O    &kp P    &kp BSLH
+//&kp LCTRL hrA    hrS      hrD        hrF        &kp G    &kp C_MUTE                            &kp PSCRN &kp H      hrJ       hrK       hrL      hrSEMI   &kp ENTER
+&kp LCTRL &kp A  &kp S    &kp D      &kp F      &kp G    &kp C_MUTE                            &kp PSCRN &kp H      &kp J     &kp K     &kp L    &kp SEMI &kp ENTER
+&tdSHFT   &kp Z  &kp X    &kp C      &kp V      &kp B                                                    &kp N      &kp M     &kp COMMA &kp DOT  &kp FSLH &tdSHFT
+                 &kp LGUI &kp DEL    &tdNAVGUI  &kp LALT &tdSHFT    &kp DEL           &none    &sl 1     &kp SPACE  &kp ENTER &kp DEL   &kp BSPC
+                                                                    &mo 3             &mo 3
             >;
         };
         symbols_layer {
@@ -113,7 +119,7 @@
         navigation_layer {
             bindings = <
 &trans    &none    &none     &none     &none     &none                                                  &none     &none     &none     &none     &none    &trans
-&trans    &none    &none     &none     &none     &none                                                  &none     &kp HOME  &kp END   &none     &none    &trans
+&trans    &none    &none     &none     &none     &kp LG(T)                                              &none     &kp HOME  &kp END   &none     &none    &trans
 &trans    &none    TCUT      TCOPY     TPASTE    &none     &none                                &none   &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT &none    &trans
 &trans    &none    _CUT      _COPY     _PASTE    &none                                                  &none     &none     &none     &none     &none    &trans
                    &trans    &none     &trans    &trans    &trans   &none             &none     &trans  &kp SPACE &trans    &trans    &trans
