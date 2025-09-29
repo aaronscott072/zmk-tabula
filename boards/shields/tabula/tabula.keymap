@@ -61,7 +61,7 @@
             tapping-term-ms = <200>;
             bindings = <&kp LSHFT>, <&caps_word>;
         };
-        tdNAVGUI: tap_dance_0 {
+        tdNAVGUI: tap_dance_1 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
