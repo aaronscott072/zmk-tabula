@@ -102,7 +102,7 @@
 //&kp LCTRL hrA    hrS      hrD        hrF        &kp G    &kp C_MUTE                            &kp PSCRN &kp H      hrJ       hrK       hrL      hrSEMI   &kp ENTER
 &kp LCTRL &kp A  &kp S    &kp D      &kp F      &kp G    &kp C_MUTE                            &kp PSCRN &kp H      &kp J     &kp K     &kp L    &kp SEMI &kp ENTER
 &tdSHFT   &kp Z  &kp X    &kp C      &kp V      &kp B                                                    &kp N      &kp M     &kp COMMA &kp DOT  &kp FSLH &tdSHFT
-                 &kp LGUI &kp DEL    &kp LGUI   &kp LALT &kp SPACE  &kp LBKT          &kp RBKT &tdSHFT   &sl 1      &kp ENTER &kp DEL   &kp BSPC
+                 &kp LGUI &kp DEL    &kp LGUI   &kp LALT &tdSHFT    &kp LBKT          &kp RBKT &sl 1     &kp SPACE  &kp SPACE &kp DEL   &kp BSPC
                                                                     &mo 3             &mo 3
             >;
         };
