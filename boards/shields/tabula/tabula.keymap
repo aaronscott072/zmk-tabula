@@ -102,17 +102,17 @@
 //&kp LCTRL hrA    hrS      hrD        hrF        &kp G    &kp C_MUTE                            &kp PSCRN &kp H      hrJ       hrK       hrL      hrSEMI   &kp ENTER
 &kp LCTRL &kp A  &kp S    &kp D      &kp F      &kp G    &kp C_MUTE                            &kp PSCRN &kp H      &kp J     &kp K     &kp L    &kp SEMI &kp ENTER
 &tdSHFT   &kp Z  &kp X    &kp C      &kp V      &kp B                                                    &kp N      &kp M     &kp COMMA &kp DOT  &kp FSLH &tdSHFT
-                 &kp LGUI &kp DEL    &tdNAVGUI  &kp LALT &tdSHFT    &kp DEL           &none    &sl 1     &kp SPACE  &kp ENTER &kp DEL   &kp BSPC
+                 &kp LGUI &kp DEL    &kp LGUI   &kp LALT &kp SPACE  &kp LBKT          &kp RBKT &tdSHFT   &sl 1      &none     &kp DEL   &kp BSPC
                                                                     &mo 3             &mo 3
             >;
         };
         symbols_layer {
             bindings = <
-&trans    &kp EXCL &kp AT    &kp POUND &kp DLLR  &kp PRCNT                                                 &none      &none   &none   &none   &none   &trans
-&trans    &none    &kp TILDE &kp DQT   &kp UNDER &kp PLUS                                                  &none      &none   &none   &none   &none   &trans
-&trans    &none    &kp GRAVE &kp APOS  &kp MINUS &kp EQUAL &none                                &none      &none      &none   &none   &none   &none   &trans
-&trans    &none    &kp LBRC  &kp RBRC  &kp LBKT  &kp RBKT                                                  &none      &none   &none   &none   &none   &trans
-                   &trans    &none     &trans    &trans    &trans    &none             &none    &trans     &kp SPACE  &trans  &trans  &trans
+&trans    &kp EXCL &kp AT    &kp POUND &kp DLLR  &kp PRCNT                                                 &none      &none    &none   &none     &none   &trans
+&trans    &none    &kp TILDE &kp DQT   &kp UNDER &kp PLUS                                                  &none      &kp HOME &kp END &none     &none   &trans
+&trans    &none    &kp GRAVE &kp APOS  &kp MINUS &kp EQUAL &none                                &none      &kp LEFT   &kp DOWN &kp UP  &kp RIGHT &none   &trans
+&trans    &none    &kp LBRC  &kp RBRC  &kp LBKT  &kp RBKT                                                  &none      &none    &none   &none     &none   &trans
+                   &trans    &none     &trans    &trans    &trans    &none             &none    &trans     &kp SPACE  &trans   &trans  &trans
                                                                      &none             &none
             >;
         };
